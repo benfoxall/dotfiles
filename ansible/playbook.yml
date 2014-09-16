@@ -1,0 +1,52 @@
+---
+- hosts: all
+
+  vars:
+    applications:
+      - alfred
+      - dropbox
+      - firefox
+      - flash
+      - google-chrome
+      - gpgtools
+      - harvest
+      - iterm2
+      - lastfm
+      - minecraft
+      - phpstorm
+      - mou
+      - sequel-pro
+      - skype
+      - sourcetree
+      - sublime-text-3
+      - spotify
+      - the-unarchiver
+      - things
+      - transmit
+      - transmission
+      - vagrant
+      - virtualbox
+      - vlc
+    application_dir: /Applications
+    brews:
+      - ack
+      - bash
+      - coreutils
+      - git
+      - htop-osx
+      - ssh-copy-id
+      - vim
+      - wget
+      - ffmpeg
+      - flac
+      - lame
+    caskroom_dir: /usr/local/caskroom
+    dotfiles_dir: /Users/craig/Code/dotfiles
+    email: oliver@whiteoctober.co.uk
+    github_username: olorton
+    home_dir: /Users/oliverlorton
+    name: Oliver Lorton
+
+  tasks:
+    - include: tasks/homebrew.yml tags=homebrew
+    # - include: tasks/dotfiles.yml tags=dotfiles
