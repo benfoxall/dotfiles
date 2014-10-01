@@ -18,7 +18,7 @@
       - sequel-pro
       - skype
       - sourcetree
-      - sublime-text-3
+      - sublime-text3
       - spotify
       - the-unarchiver
       - things
@@ -32,20 +32,21 @@
       - ack
       - bash
       - coreutils
+      - ffmpeg
+      - flac
       - git
       - htop-osx
+      - lame
+      - nginx
       - ssh-copy-id
       - vim
       - wget
-      - ffmpeg
-      - flac
-      - lame
     caskroom_dir: /usr/local/caskroom
-    dotfiles_dir: /Users/craig/Code/dotfiles
-    email: oliver@whiteoctober.co.uk
-    github_username: olorton
-    home_dir: /Users/oliverlorton
-    name: Oliver Lorton
+    # dotfiles_dir: /Users/oliver/Code/dotfiles
+    # email: oliver@whiteoctober.co.uk
+    # github_username: olorton
+    # home_dir: /Users/oliverlorton
+    # name: Oliver Lorton
 
   tasks:
     - include: tasks/homebrew.yml tags=homebrew
