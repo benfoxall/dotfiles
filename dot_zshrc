@@ -32,6 +32,10 @@ function originalMacAddr() {
 }
 
 
+# Colours & prefs
+alias ls='ls --color=auto'
+
+
 # previous yarn config?
 # export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
