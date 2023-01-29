@@ -4,6 +4,7 @@
 Install on remote machine
 
 Requirements:
+* https://www.chezmoi.io/
 * https://starship.rs/guide/#%F0%9F%9A%80-installation
 
 ```bash
