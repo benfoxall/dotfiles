@@ -12,6 +12,7 @@ HISTFILESIZE=1000000
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 
+export ITERM2_SQUELCH_MARK=1
 source ~/.iterm2_shell_integration.zsh
 
 # Random Mac address for wifis
