@@ -5,6 +5,9 @@ export PATH=$PATH:~/bin
 # Git autocomplete
 autoload -Uz compinit && compinit
 
+# Syntax highlighting
+source .zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # history size
 # https://blog.akatz.org/fixing-macos-zsh-terminal-history-settings/
 alias history="history 1"
