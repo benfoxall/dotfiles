@@ -31,7 +31,6 @@ function originalMacAddr() {
     sudo ifconfig en0 lladdr 3c:06:30:48:0b:7a
 }
 
-{{ completion "zsh" }}
 
 # previous yarn config?
 # export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
