@@ -1,0 +1,54 @@
+
+# Add local bin dir
+export PATH=$PATH:~/bin
+
+# Git autocomplete
+autoload -Uz compinit && compinit
+
+# history size
+# https://blog.akatz.org/fixing-macos-zsh-terminal-history-settings/
+alias history="history 1"
+HISTFILESIZE=1000000
+HISTSIZE=1000000
+SAVEHIST=$HISTSIZE
+
+eval "$(starship init zsh)"
+source ~/.iterm2_shell_integration.zsh
+
+# Random Mac address for wifis
+function macRandom() {
+    sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -z
+    NEW_MAC=`openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'`
+    sudo ifconfig en0 lladdr $NEW_MAC
+}
+
+# Reset back to macbook address
+function originalMacAddr() {
+    sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -z
+    sudo ifconfig en0 lladdr 3c:06:30:48:0b:7a
+}
+
+
+# previous yarn config?
+# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+#compdef gt
+###-begin-gt-completions-###
+#
+# yargs command completion script
+#
+# Installation: /opt/homebrew/bin/gt completion >> ~/.zshrc
+#    or /opt/homebrew/bin/gt completion >> ~/.zprofile on OSX.
+#
+_gt_yargs_completions()
+{
+  local reply
+  local si=$IFS
+  IFS=$'
+' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" /opt/homebrew/bin/gt --get-yargs-completions "${words[@]}"))
+  IFS=$si
+  _describe 'values' reply
+}
+compdef _gt_yargs_completions gt
+###-end-gt-completions-###
+
