@@ -2,5 +2,5 @@
 # Benfiles
 
 ```bash
-chezmoi init https://github.com/$GITHUB_USERNAME/dotfiles.git
+sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply benfoxall
 ```
