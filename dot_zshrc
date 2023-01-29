@@ -5,9 +5,6 @@ export PATH=$PATH:~/bin
 # Git autocomplete
 autoload -Uz compinit && compinit
 
-# Syntax highlighting
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # history size
 # https://blog.akatz.org/fixing-macos-zsh-terminal-history-settings/
 alias history="history 1"
@@ -15,7 +12,6 @@ HISTFILESIZE=1000000
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 
-eval "$(starship init zsh)"
 source ~/.iterm2_shell_integration.zsh
 
 # Random Mac address for wifis
@@ -32,8 +28,16 @@ function originalMacAddr() {
 }
 
 
-# Colours & prefs
+### 🎨 Styling
+
+# Add starship prompt
+eval "$(starship init zsh)"
+
+# Colour ls
 alias ls='ls --color=auto'
+
+# Syntax highlighting
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # previous yarn config?
