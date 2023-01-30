@@ -9,6 +9,6 @@ add_newline = false
 success_symbol = '[➜](black)'
 
 [nodejs]
-symbol = '🐴'
+symbol = '🐴 '
 
 
