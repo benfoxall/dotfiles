@@ -3,7 +3,6 @@
 export PATH=$PATH:~/bin
 
 # Git autocomplete
-#hello
 autoload -Uz compinit && compinit
 
 # history size
@@ -41,6 +40,9 @@ alias ls='ls --color=auto'
 # Syntax highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+
+# Install fnm helpers
+eval "$(fnm env --use-on-cd)"
 
 # previous yarn config?
 # export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
